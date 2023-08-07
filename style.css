@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
-    font-style: normal;
 }
 
 /* Contenu principal */
@@ -405,12 +404,22 @@ html {
     gap: 31px;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+
 .activites-cards .card {
     width: 30%;
     height: 450px;
     padding: 0;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute de l'ombre ici */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .activites-cards .card-title {
@@ -438,19 +447,19 @@ html {
     padding: 0 30px 25px 30px;
     margin: 0 auto;
 }
-.footer-1 {
+.footer {
     display: flex;
     flex-direction: column;
     padding-left: 60px;
 }
-.footer-1 h3 {
+.footer h3 {
     min-width: 165px;
     height: 21px;
     font-weight: 700;
     font-size: 18px;
     margin: 25px 0 15px 0;
 }
-.footer-1 a {
+.footer a {
     min-width: 180px;
     height: 19px;
     font-weight: 400;
@@ -461,10 +470,7 @@ html {
 }
 
 @media screen and (max-width: 1024px) {
-
-    html {
-        max-width: 1024px;
-    }
+ 
     .header {
         min-width: 90%;
     }
@@ -475,8 +481,13 @@ html {
     .search-filters {
         min-width: 90%;
         max-width: 95%;
-
         gap: 15px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        flex-wrap: wrap; 
+        margin-bottom: 50px;
     }
     .filters {
         width: 100%;
@@ -574,16 +585,13 @@ html {
         width: 93%;
         gap: 70px;
     }
-    .footer-1 {
+    .footer {
         padding-left: 15px;
     }
 }
 
 @media screen and (max-width: 768px) {
 
-    html {
-        max-width: 768px;
-    }
     /* Header MOBILE */
     body {
         overflow-x: hidden;
@@ -670,6 +678,16 @@ html {
         display: flex;
         padding: 0 0 0 13px;
     }
+  .hebergements::after,
+  .activites::after {
+    content: "";
+    display: block;
+    width: 100px; 
+    height: 3px;
+    background-color: blue; 
+    margin-top: 5px; 
+  }
+
 
     /* Search filters MOBILE */
     .search-filters {
@@ -858,13 +876,13 @@ html {
         margin: 60px auto 0 auto;
         gap: 30px;
     }
-    .footer-1 {
+    .footer {
         gap: 0;
     }
-    .footer-1 h3 {
+    .footer h3 {
         margin: 0 0 15px 0;
     }
-    .footer-1 a {
+    .footer a {
         margin: 15px 0 0 0;
     }
 }
